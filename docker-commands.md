@@ -4,8 +4,14 @@
 ## list of all containers irrespective of the state
     docker ps -a
 
+## list only container IDs irrespective of the state
+    docker ps -a -q
+
 ## list of images available in the server
     docker images
+
+#### list only image IDs
+    docker images -q
 
 ## download or pull the image
     docker pull <image name>:<version>
@@ -33,6 +39,9 @@
 ## removing the image
     docker rmi <image id>
 
+## remove all images
+    docker rmi -f $(docker images -q)
+
 ## pull image, create and start the container with a single command
 
 #### runs the container in foreground and terminal is locked
@@ -58,6 +67,9 @@
 
 ## rename an existing container
     docker rename <existing name> <new name>
+
+## Removing all containers
+    docker rm -f $(docker ps -a -q)
 
 ## build a custom image
     docker build -t <name for image>:<version> .
