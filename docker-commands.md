@@ -58,3 +58,24 @@
 
 ## rename an existing container
     docker rename <existing name> <new name>
+
+## build a custom image
+    docker build -t <name for image>:<version> .
+
+## pushing the image to docker hub
+
+#### login to docker hub account, if not already done
+    docker login -u <username>
+
+#### tag the custom image
+    docker tag <name of custom image>:<version> <username>/<name of custom image>:<version>
+
+* name of the custom image in local and docker hub can be same or different
+
+#### push the image
+    docker push <username>/<name of custom image>:<version>
+
+## Use LABEL to filter the specific images
+    docker images -f "label=<key>=<value>"
+#### example
+*   docker images -f "label=author=John"
