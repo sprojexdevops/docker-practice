@@ -62,6 +62,9 @@
 ## get the logs of a container
     docker logs <conatiner id>
 
+#### to see the logs dynamically (similar to tail)
+    docker logs -f <container id>
+
 ## naming a container -- if no name is specified a random name is given to a container
     docker run -d -p <host port>:<container port> --name <name>  <image name>:<version>
 
