@@ -1,0 +1,14 @@
+1. FROM --> represent base OS
+2. RUN --> to run commands while creating the image
+3. USER --> to set the user for running instructions
+4. WORKDIR --> set the Working directory 
+5. CMD --> commands to run when creating container
+6. ENTRYPOINT --> similar to CMD but can't be overriden
+7. COPY --> copy files from local to image
+8. ADD --> copy files from local or download from internet or uttar (extract) the file to image
+9. LABEL --> like tags, can be used to filter images
+10. EXPOSE --> details abt the ports used by container
+11. ENV --> set env Variables to be used inside the container
+12. ARG --> used to set Variables at build time only
+13. ONBUILD --> like a baseline image with it's own instructions, when used as a base image for another custom image the base image instructions also executed to set some default configurations which are required to exist in all custom images as per the organization.
+
